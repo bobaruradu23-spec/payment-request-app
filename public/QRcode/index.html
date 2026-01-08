@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Payment App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h2>Creează o Cerere</h2>
+        
+        <div class="input-group">
+            <input type="number" id="amount" placeholder="Suma (ex: 50)" />
+            <select id="currency">
+                    <option value="RON">🇷🇴 RON</option>
+                    <option value="EUR">🇪🇺 EUR</option>
+                    <option value="USD">🇺🇸 USD</option>
+                    <option value="GBP">🇬🇧 GBP</option>
+            </select>
+        </div>
+        <input type="text" id="reason" placeholder="Motivul (ex: Pizza, Chirie..)" />
+        
+        <button onclick="creeazaLink()">Generează QR Code</button>
+        
+        <div id="result" style="display: none;">
+            <p>Scanează pentru a plăti:</p>
+            <img id="qr-image" src="" alt="QR Code" style="width: 200px; margin: 0 auto; display: block;"/>
+            <p><small>Sau trimite link-ul:</small></p>
+            <a id="payment-link" href="#" target="_blank" style="word-break: break-all; font-size: 12px;">...</a>
+        </div>
+
+        <div id="live-dashboard" style="display: none; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+            <h3>Status Plăți</h3>
+            <p>Total Strâns: <strong id="total-amount" style="color: #27ae60; font-size: 1.2em;">0</strong> <span id="display-currency">RON</span></p>
+            
+            <div id="transactions-list" style="text-align: left; margin-top: 10px;">
+                <p style="color: #999;">Aștept plăți...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/QRcode/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 { 
+    color: #333; 
+    margin-bottom: 5px; 
+}
+
+.amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 15px 0;
+}
+
+.details { 
+    color: #666; 
+    margin-bottom: 20px; 
+    line-height: 1.5; 
+}
+
+.input-group { 
+    margin-bottom: 20px; 
+    text-align: left; 
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-container { 
+    display: flex; 
+    gap: 10px; 
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+.btn-pay { 
+    background-color: #27ae60; 
+    color: white; 
+}
+
+.btn-refuse { 
+    background-color: #e74c3c; 
+    color: white; 
+}
+
+button:hover { 
+    opacity: 0.9; 
+}
+
+#status-msg { 
+    margin-top: 20px; 
+    font-weight: bold; 
+}
+
+.loader { 
+    color: #888; 
+}

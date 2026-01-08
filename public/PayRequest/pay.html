@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalii Plată</title>
+    
+   <link rel="stylesheet" href="/PayRequest/pay.css">
+</head>
+<body>
+
+    <div class="card">
+        <div id="loading" class="loader">Se încarcă detaliile plății...</div>
+
+        <div id="content" style="display: none;">
+            <p>Cerere de la <strong id="creator-name">...</strong></p>
+            
+            <div class="amount">
+                <span id="amount-display">0</span> 
+                <span id="currency-display">RON</span>
+            </div>
+            
+            <p class="details">
+                Motiv: <strong id="reason-display">...</strong><br>
+                <small id="date-display"></small>
+            </p>
+
+            <div class="input-group">
+                <label>Numele tău (opțional):</label>
+                <input type="text" id="payer-name" placeholder="Ex: Mihai">
+            </div>
+
+            <div class="btn-container">
+                <button class="btn-refuse" onclick="raspunde('REJECTED')">Nu platesc</button>
+                <button class="btn-pay" onclick="raspunde('ACCEPTED')">Plateste</button>
+            </div>
+        </div>
+
+        <div id="status-msg"></div>
+    </div>
+
+    <script src="/PayRequest/pay.js"></script>
+</body>
+</html>
